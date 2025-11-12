@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Java Script</title>
+        <style>
+            button{
+                background-color: skyblue;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                margin: 10px;
+                border:2px solid rgb(140, 0, 255);
+                padding: 5px 20px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ROCK PAPER SCISSOR</h1>
+        <button
+        onclick ="
+        pickcomputerMove();
+    let result ='';
+        if (computerPick === 'rock'){
+            result='Tie';
+        }else if(computerPick === 'paper'){
+            result='You Lose';
+        }else if(computerPick === 'scissor'){
+            result = 'You Win';
+        }
+        alert(`you pick paper,computer pick ${computerPick} ${result}`);
+        " >Rock</button>
+        <button
+        onclick ="
+        pickcomputerMove();
+    let result ='';
+        if (computerPick === 'rock'){
+            result='you win';
+        }else if(computerPick === 'paper'){
+            result='Tie';
+        }else if(computerPick === 'scissor'){
+            result = 'You Lose';
+        }
+        alert(`you pick rock,computer pick ${computerPick} ${result}`);"
+    class="paper" >Paper</button>
+        <button
+        onclick ="
+        pickcomputerMove();
+    let result ='';
+        if (computerPick === 'rock'){
+            result='Tie';
+        }else if(computerPick === 'paper'){
+            result='You Lose';
+        }else if(computerPick === 'scissor'){
+            result = 'You Win';
+        }
+        alert(`you pick rock,computer pick ${computerPick} ${result}`); "
+        class="scissor">scissor</button>
+        <script>
+            let computerpick='';
+            function pickcomputerMove(){
+                
+        const randompick = Math.random();
+        if (randompick >= 0 && randompick <= 1/3){
+            computerPick ='rock';
+        }else if (randompick >= 1/3 && randompick < 2/3){
+            computerPick= 'paper';
+    }
+        else if (randompick >= 2/3 && randompick < 1){
+            computerPick = 'scissor';
+    }
+        console.log(computerPick);
+            }
+        </script>
+    </body>
+    </html>
